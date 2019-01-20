@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+    <!--Jumbotron for app-->
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron float-md-center">
+                <h1 class="text-center">Anytime is Train Time</h1> 
+                <p class="text-center">Be on time - everytime!</p> 
+            </div>
+        </div>
+        <!--Table to display submitted values-->
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col" >Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (Mins)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody class="body">
+                        <td id= "nameDisplay"></td>
+                        <td id="destinationDisplay"></td>
+                        <td id="frequencyDisplay"></td>
+                        <td id="arrivalDisplay"></td>
+                        <td id="awayDisplay"></td>
+                </tbody>
+            </table>    
+        </div>
+        <!--Form to get values for table-->
+        <div class="row">
+        <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">Add Train To Schedule</div>
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Train Name</label>
+                                <input type="text" class="form-control" id="nameValue">
+                            </div>
+                            <div class="form-group">
+                                <label>Destination</label>
+                                <input type="text" class="form-control" id="destinationValue">
+                            </div>
+                            <div class="form-group">
+                                <label>Frequency</label>
+                                <input type="text" class="form-control" id="frequencyValue">
+                            </div>
+                            <div class="form-group">
+                                <label>Next Arrival</label>
+                                <input type="text" class="form-control" id="arrivalValue">
+                            </div>
+                            <div class="form-group">
+                                <label>Next Arrival</label>
+                                <input type="text" class="form-control" id="awayValue">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+ <script src="app.js"></script>    
+</body>
+</html>
