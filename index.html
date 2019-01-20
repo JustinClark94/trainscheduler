@@ -5,20 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Train Scheduler</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<!--Bootstrap reference-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--firebase reference-->
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
 </head>
 <body>
     <!--Jumbotron for app-->
     <div class="container">
-        <div class="row">
-            <div class="jumbotron float-md-center">
-                <h1 class="text-center">Anytime is Train Time</h1> 
-                <p class="text-center">Be on time - everytime!</p> 
-            </div>
+        <div class="jumbotron">
+            <h1 class="text-center">Anytime is Train Time</h1> 
+            <p class="text-center">Be on time - everytime!</p> 
         </div>
-        <!--Table to display submitted values-->
+        
+        <!--New row and full length column-->
         <div class="row">
+        <div class="col-md-12">
+        <!--Table to display submitted values-->
+        <div class="card mb-4">
+        <div class="card-body">
+
             <table class="table">
                 <thead>
                     <tr>
@@ -38,9 +46,14 @@
                 </tbody>
             </table>    
         </div>
-        <!--Form to get values for table-->
+       </div>
+    </div>
+</div>
+       
+        <!--New row and full length column-->
         <div class="row">
         <div class="col-md-12">
+        <!--Form to get values for table-->
                 <div class="card mb-4">
                     <div class="card-header">Add Train To Schedule</div>
                     <div class="card-body">
@@ -57,14 +70,6 @@
                                 <label>Frequency</label>
                                 <input type="text" class="form-control" id="frequencyValue">
                             </div>
-                            <div class="form-group">
-                                <label>Next Arrival</label>
-                                <input type="text" class="form-control" id="arrivalValue">
-                            </div>
-                            <div class="form-group">
-                                <label>Next Arrival</label>
-                                <input type="text" class="form-control" id="awayValue">
-                            </div>
                             <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                         </form>
                     </div>
@@ -73,7 +78,6 @@
         </div>
         </div>
     </div>
-    
  <script src="app.js"></script>    
 </body>
 </html>
